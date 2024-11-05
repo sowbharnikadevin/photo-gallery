@@ -1,0 +1,138 @@
+.app {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f0f5, #e3e3e3);
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Upload Input Styling */
+  .upload-container input[type='file'] {
+    display: none;
+  }
+  
+  .upload-container label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-container label:hover {
+    background-color: #45a049;
+  }
+  
+  /* Gallery Grid Styling */
+  .gallery {
+    min-height: 300px; /* Ensure space for photos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .photo-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .photo-container:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .photo:hover {
+    opacity: 0.8;
+  }
+  
+  /* Delete Button Styling */
+  .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff4c4c;
+  }
+  
+  /* Popup Modal Styling */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+  
+  .modal-close {
+    margin-top: 10px;
+    background-color: #ff4c4c;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-close:hover {
+    background-color: #ff1a1a;
+  }
+  
+  /* Overlay Background for Modal */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
